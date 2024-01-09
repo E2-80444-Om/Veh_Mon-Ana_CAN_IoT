@@ -113,14 +113,14 @@ int main(void)
   		 sprintf(str, "Rain value is %d -> Heavy Rain...:)\r\n", value);
   	  }
   	  else if(value <255)
-      {
+          {
   	  	 sprintf(str, "Rain value is %d -> Moderate Rain...:)\r\n", value);
   	  }
   	  else
   	  {
   		sprintf(str, "Rain value is %d -> No Rain...:(\r\n", value);
   	  }
-      HAL_UART_Transmit(&huart2, (uint8_t *)str, strlen(str), HAL_MAX_DELAY);
+          HAL_UART_Transmit(&huart2, (uint8_t *)str, strlen(str), HAL_MAX_DELAY);
   	  HAL_Delay(1000);
   	  HAL_ADC_Stop(&hadc1);
   }
