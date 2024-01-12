@@ -135,22 +135,20 @@ int main(void)
 		  sprintf(str1, "Rain value is %d -> No Rain...:(\r\n", read.value1);
 	  }
 	  HAL_UART_Transmit(&huart2, (uint8_t *)str1, strlen(str1), HAL_MAX_DELAY);
-	  read.value2 = HAL_ADC_GetValue(&hadc2);
-	  read.temp = read.value2 * 0.08;
 
 	  if(read.temp < 30)
 	  {
-		  sprintf(str2,"Low temperature....Temperature is %d\r\n",read.temp);
+		  sprintf(str2,"Low temperature....Temperature is %d\r\n\n",read.temp);
 	  }
-	  else if(read.temp == 30 )
+	  else if(read.temp >= 30 && read.temp <=35 )
 	  {
-		  sprintf(str2,"Normal Temperature....Temperature is %d\r\n",read.temp);
+		  sprintf(str2,"Normal Temperature....Temperature is %d\r\n\n",read.temp);
 	  }
 	  else{
-		  sprintf(str2,"High Temperature....Temperature is %d\r\n",read.temp);
+		  sprintf(str2,"High Temperature....Temperature is %d\r\n\n",read.temp);
 	  }
 	  HAL_UART_Transmit(&huart2, (uint8_t *)str2, strlen(str2), HAL_MAX_DELAY);
-	  HAL_Delay(1000);
+	  HAL_Delay(3000);
 	  HAL_ADC_Stop(&hadc1);
 	  HAL_ADC_Stop(&hadc2);
     /* USER CODE BEGIN 3 */
