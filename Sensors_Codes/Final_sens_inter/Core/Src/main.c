@@ -112,45 +112,48 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+	struct reading read;
+	HAL_ADC_Start(&hadc1);
+	HAL_ADC_Start(&hadc2);
+	  
+	HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+	HAL_ADC_PollForConversion(&hadc2, HAL_MAX_DELAY);
+	  
+	read.value1 = HAL_ADC_GetValue(&hadc1);
+	read.value2 = HAL_ADC_GetValue(&hadc2);
+	  
+	read.temp = read.value2 * 0.08;
 
-	  struct reading read;
-	  HAL_ADC_Start(&hadc1);
-	  HAL_ADC_Start(&hadc2);
-	  HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
-	  HAL_ADC_PollForConversion(&hadc2, HAL_MAX_DELAY);
-	  read.value1 = HAL_ADC_GetValue(&hadc1);
-	  read.value2 = HAL_ADC_GetValue(&hadc2);
-	  read.temp = read.value2 * 0.08;
+	
+	if(read.value1< 100)
+  	{
+		sprintf(str1, "Rain value is %d -> Heavy Rain...:)\r\n", read.value1);
+	}
+	else if(read.value1 <255)
+	{
+		sprintf(str1, "Rain value is %d -> Moderate Rain...:)\r\n", read.value1);
+	}
+	else
+	{
+		sprintf(str1, "Rain value is %d -> No Rain...:(\r\n", read.value1);
+	}
+	HAL_UART_Transmit(&huart2, (uint8_t *)str1, strlen(str1), HAL_MAX_DELAY);
 
-	  if(read.value1< 100)
-  	  {
-		  sprintf(str1, "Rain value is %d -> Heavy Rain...:)\r\n", read.value1);
-	  }
-	  else if(read.value1 <255)
-	  {
-		  sprintf(str1, "Rain value is %d -> Moderate Rain...:)\r\n", read.value1);
-	  }
-	  else
-	  {
-		  sprintf(str1, "Rain value is %d -> No Rain...:(\r\n", read.value1);
-	  }
-	  HAL_UART_Transmit(&huart2, (uint8_t *)str1, strlen(str1), HAL_MAX_DELAY);
-
-	  if(read.temp < 30)
-	  {
-		  sprintf(str2,"Low temperature....Temperature is %d\r\n\n",read.temp);
-	  }
-	  else if(read.temp >= 30 && read.temp <=35 )
-	  {
-		  sprintf(str2,"Normal Temperature....Temperature is %d\r\n\n",read.temp);
-	  }
-	  else{
-		  sprintf(str2,"High Temperature....Temperature is %d\r\n\n",read.temp);
-	  }
-	  HAL_UART_Transmit(&huart2, (uint8_t *)str2, strlen(str2), HAL_MAX_DELAY);
-	  HAL_Delay(3000);
-	  HAL_ADC_Stop(&hadc1);
-	  HAL_ADC_Stop(&hadc2);
+	if(read.temp < 30)
+	{
+		sprintf(str2,"Low temperature....Temperature is %d\r\n\n",read.temp);
+	}
+	else if(read.temp >= 30 && read.temp <=35 )
+	{
+		sprintf(str2,"Normal Temperature....Temperature is %d\r\n\n",read.temp);
+	}
+	else{
+		sprintf(str2,"High Temperature....Temperature is %d\r\n\n",read.temp);
+	}
+	HAL_UART_Transmit(&huart2, (uint8_t *)str2, strlen(str2), HAL_MAX_DELAY);
+	HAL_Delay(3000);
+	HAL_ADC_Stop(&hadc1);
+	HAL_ADC_Stop(&hadc2);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
