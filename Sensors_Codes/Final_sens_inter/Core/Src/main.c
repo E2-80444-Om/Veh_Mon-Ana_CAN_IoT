@@ -121,10 +121,11 @@ int main(void)
 	  
 	read.value1 = HAL_ADC_GetValue(&hadc1);
 	read.value2 = HAL_ADC_GetValue(&hadc2);
-	  
+	
+	//Temperature convert formula.
 	read.temp = read.value2 * 0.08;
 
-	
+	//Rain-water sensor(LM393) code.
 	if(read.value1< 100)
   	{
 		sprintf(str1, "Rain value is %d -> Heavy Rain...:)\r\n", read.value1);
@@ -137,8 +138,10 @@ int main(void)
 	{
 		sprintf(str1, "Rain value is %d -> No Rain...:(\r\n", read.value1);
 	}
+	//Transmit the Rain-water sensor (LM393) value and print the string.
 	HAL_UART_Transmit(&huart2, (uint8_t *)str1, strlen(str1), HAL_MAX_DELAY);
 
+	//Temperature sensor (LM35) code.
 	if(read.temp < 30)
 	{
 		sprintf(str2,"Low temperature....Temperature is %d\r\n\n",read.temp);
@@ -150,8 +153,11 @@ int main(void)
 	else{
 		sprintf(str2,"High Temperature....Temperature is %d\r\n\n",read.temp);
 	}
+	//Transmit the temperature sensor value and print string.
 	HAL_UART_Transmit(&huart2, (uint8_t *)str2, strlen(str2), HAL_MAX_DELAY);
+	
 	HAL_Delay(3000);
+	
 	HAL_ADC_Stop(&hadc1);
 	HAL_ADC_Stop(&hadc2);
     /* USER CODE BEGIN 3 */
