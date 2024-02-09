@@ -60,8 +60,8 @@ all: main-build
 main-build: Rx2.elf secondary-outputs
 
 # Tool invocations
-Rx2.elf Rx2.map: $(OBJS) $(USER_OBJS) /home/sameer/timer_programs/Rx2/STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Rx2.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/sameer/timer_programs/Rx2/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Rx2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Rx2.elf Rx2.map: $(OBJS) $(USER_OBJS) /home/om/GitHub/Veh_Safety_CAN_IoT/CAN_VERSION/VERSION_1/Rx2/STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Rx2.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/om/GitHub/Veh_Safety_CAN_IoT/CAN_VERSION/VERSION_1/Rx2/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Rx2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

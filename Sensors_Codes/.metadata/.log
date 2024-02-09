@@ -1,0 +1,78 @@
+!SESSION 2024-02-08 14:50:50.463 -----------------------------------------------
+eclipse.buildId=Version 1.14.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Command-line arguments:  -data /home/om/GitHub/Veh_Safety_CAN_IoT/Sensors_Codes -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-02-08 14:50:55.687
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-02-08 14:50:55.688
+!MESSAGE Log4j2 initialized with config file /home/om/GitHub/Veh_Safety_CAN_IoT/Sensors_Codes/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-02-08 14:51:03.946
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-02-09 14:06:04.289 -----------------------------------------------
+eclipse.buildId=Version 1.14.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Command-line arguments:  -data /home/om/GitHub/Veh_Safety_CAN_IoT/Sensors_Codes -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-02-09 14:06:08.709
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-02-09 14:06:08.710
+!MESSAGE Log4j2 initialized with config file /home/om/GitHub/Veh_Safety_CAN_IoT/Sensors_Codes/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-02-09 14:06:11.309
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.jobs 2 2 2024-02-09 14:06:16.628
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.Workbench$39
+!SESSION 2024-02-09 14:07:48.574 -----------------------------------------------
+eclipse.buildId=Version 1.14.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-02-09 14:07:53.243
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-02-09 14:07:53.244
+!MESSAGE Log4j2 initialized with config file /home/om/GitHub/Veh_Safety_CAN_IoT/Sensors_Codes/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-02-09 14:07:56.036
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-02-09 14:10:00.549
+!MESSAGE Indexed 'Tx2' (25 sources, 112 headers) in 4.68 sec: 9,588 declarations; 39,206 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.3%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-02-09 14:30:11.389
+!MESSAGE Indexed 'Rx' (25 sources, 118 headers) in 3.16 sec: 10,276 declarations; 46,339 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.26%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-02-09 14:31:14.085
+!MESSAGE Indexed 'Rx2' (22 sources, 109 headers) in 2.55 sec: 9,006 declarations; 33,556 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.34%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-02-09 14:41:19.534
+!MESSAGE Indexed 'RainWater' (25 sources, 125 headers) in 2.73 sec: 12,450 declarations; 48,522 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.39%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-02-09 14:49:37.963
+!MESSAGE Indexed 'Rx2' (22 sources, 109 headers) in 2.02 sec: 9,006 declarations; 33,556 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.34%)
+!SESSION 2024-02-09 16:23:53.841 -----------------------------------------------
+eclipse.buildId=Version 1.14.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-02-09 16:23:59.032
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-02-09 16:23:59.033
+!MESSAGE Log4j2 initialized with config file /home/om/GitHub/Veh_Safety_CAN_IoT/Sensors_Codes/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-02-09 16:24:04.062
+!MESSAGE Started RMI Server, listening on port 41337
