@@ -31,3 +31,18 @@ Command-line arguments:  -data /home/om/GitHub/Veh_Safety_CAN_IoT/CAN_VERSION/VE
 
 !ENTRY org.eclipse.cdt.core 1 0 2024-02-09 16:25:01.326
 !MESSAGE Indexed 'Rx2' (22 sources, 109 headers) in 4.81 sec: 9,006 declarations; 33,556 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.34%)
+!SESSION 2024-02-09 16:51:38.840 -----------------------------------------------
+eclipse.buildId=Version 1.14.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-02-09 16:51:42.956
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-02-09 16:51:42.957
+!MESSAGE Log4j2 initialized with config file /home/om/GitHub/Veh_Safety_CAN_IoT/CAN_VERSION/VERSION_1/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-02-09 16:51:45.450
+!MESSAGE Started RMI Server, listening on port 41337
