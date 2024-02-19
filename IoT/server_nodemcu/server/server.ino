@@ -3,8 +3,8 @@
 #include<ESP8266HTTPClient.h>
 
 
-const char *ssid = "MotoG62";
-const char *password = "12345678";
+const char *ssid = "Sanket";
+const char *password = "sanket@123";
 
 const int bufferSize=64;
 char inputBuffer[bufferSize];
@@ -32,7 +32,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  //int value = analogRead(A0);
+
   if(Serial.available()>0){
     int bytesRead = Serial.readBytesUntil('\n',inputBuffer,bufferSize-1);
     inputBuffer[bytesRead]='\0';
@@ -47,11 +47,11 @@ void loop() {
 //ring body = String(temp);
 
  String body = "{ \"temperature\":"+String(inputBuffer)+",\"rain\":"+String(inputBuffer1)+" }";
-  // { "temperature":1024}
+ 
     Serial.println(body);
   HTTPClient httpclient;
   WiFiClient wificlient;
-  httpclient.begin(wificlient, "http://192.168.223.254:5000/monitoring");
+  httpclient.begin(wificlient, "http://192.168.47.254:5000/monitor");
 httpclient.addHeader("content-type", "application/json");
   int statuscode = httpclient.POST(body);
   Serial.printf("Status Code : %d\n", statuscode);

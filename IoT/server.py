@@ -10,11 +10,11 @@ server = Flask(__name__)
 def welcome():
     return response.create_response("Welcome to IoT Application");
 
-@server.route("/monitoring", methods = {'GET', 'POST'})
+@server.route("/monitor", methods = {'GET', 'POST'})
 def monitoring_methods():
     if (request.method == 'GET'):
         # to get data from database form a query
-        query = f"select * from monitoring;"
+        query = f"select * from monitor;"
 
         # execute query to get all temps from database
         temps = db.execute_select_query(query)
@@ -26,7 +26,7 @@ def monitoring_methods():
         temperature = request.get_json().get('temperature')
         rain = request.get_json().get('rain')
         #if 1:
-        query = f"insert into monitoring(temperature,temp_msg,rain,rain_msg) values({temperature},{rain});"
+        query = f"insert into monitor(temperature,rain) values({temperature},{rain});"
         
         db.execute_query(query)
 
